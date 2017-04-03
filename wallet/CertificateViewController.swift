@@ -66,8 +66,15 @@ class CertificateViewController: UIViewController {
 
         NSLayoutConstraint.activate(constraints)
         
-        let url = URL(string: "https://apple.com")!
-        webView.load(URLRequest(url: url))
+        let file = Bundle.main.url(forResource: "certificate", withExtension: "html")
+//        webView.load(URLRequest(url: file!)) // this works
+        let contentFormat = try! String(contentsOf: file!)
+        let contents = String(format: contentFormat, certificate.assertion.uid);
+        webView.loadHTMLString(contents, baseURL: Paths.certificatesDirectory)
+
+//        let contents =
+//        webView.loadHTMLString(<#T##string: String##String#>, baseURL: Paths.certificatesDirectory);
+//        webView.loadFileURL(url!, allowingReadAccessTo: Paths.certificatesDirectory)
         
         self.webView = webView
     }

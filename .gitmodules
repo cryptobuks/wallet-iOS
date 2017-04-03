@@ -7,3 +7,6 @@
 [submodule "certificate-web-component"]
 	path = certificate-web-component
 	url = git@github.com:learningmachine/certificate-web-component.git
+[submodule "External/certificate-web-component"]
+	path = External/certificate-web-component
+	url = git@github.com:learningmachine/certificate-web-component.git

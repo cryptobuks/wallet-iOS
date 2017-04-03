@@ -48,6 +48,7 @@
 		836031C31E5E5064005B2D2E /* SampleCertificate.json in Resources */ = {isa = PBXBuildFile; fileRef = 836031C21E5E5064005B2D2E /* SampleCertificate.json */; };
 		836031C51E5E513A005B2D2E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836031C41E5E513A005B2D2E /* Settings.bundle */; };
 		836A0AE21E205BB4009FC12F /* AddIssuerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A0AE11E205BB4009FC12F /* AddIssuerUITests.swift */; };
+		837D48761E92FF9F00DA180A /* certificate.html in Resources */ = {isa = PBXBuildFile; fileRef = 837D48751E92FF9F00DA180A /* certificate.html */; };
 		83802BF41E01BC1E00E54C13 /* NoCertificatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83802BF21E01BC1E00E54C13 /* NoCertificatesTableViewCell.swift */; };
 		838DC1301E43EF1600533AEB /* ReplacePassphraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DC12C1E43EF1600533AEB /* ReplacePassphraseViewController.swift */; };
 		838DC1331E43EFB900533AEB /* ReplacePassphraseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838DC1311E43EFB900533AEB /* ReplacePassphraseViewController.xib */; };
@@ -151,6 +152,7 @@
 		836031C21E5E5064005B2D2E /* SampleCertificate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleCertificate.json; sourceTree = "<group>"; };
 		836031C41E5E513A005B2D2E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		836A0AE11E205BB4009FC12F /* AddIssuerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIssuerUITests.swift; sourceTree = "<group>"; };
+		837D48751E92FF9F00DA180A /* certificate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = certificate.html; sourceTree = "<group>"; };
 		83802BF21E01BC1E00E54C13 /* NoCertificatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCertificatesTableViewCell.swift; sourceTree = "<group>"; };
 		838DC12C1E43EF1600533AEB /* ReplacePassphraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplacePassphraseViewController.swift; sourceTree = "<group>"; };
 		838DC1321E43EFB900533AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ReplacePassphraseViewController.xib; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				836031C21E5E5064005B2D2E /* SampleCertificate.json */,
+				837D48751E92FF9F00DA180A /* certificate.html */,
 			);
 			name = Assets;
 			path = wallet/Assets;
@@ -504,6 +507,7 @@
 				83111B2F1DA4110C006B058D /* Assets.xcassets in Resources */,
 				83D9479A1E01EA3C0038C4E2 /* CertificateTitleTableViewCell.xib in Resources */,
 				836031C51E5E513A005B2D2E /* Settings.bundle in Resources */,
+				837D48761E92FF9F00DA180A /* certificate.html in Resources */,
 				83431D881DC406600025C055 /* RenderedCertificateView.xib in Resources */,
 				838DC1361E43F0A400533AEB /* NoCertificatesTableViewCell.xib in Resources */,
 				838DC1331E43EFB900533AEB /* ReplacePassphraseViewController.xib in Resources */,
