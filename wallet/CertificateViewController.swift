@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 import BlockchainCertificates
 import JSONLD
 
@@ -15,8 +16,8 @@ class CertificateViewController: UIViewController {
     
     public let certificate: Certificate
     private let bitcoinManager = CoreBitcoinManager()
-    
-    @IBOutlet weak var renderedCertificateView: RenderedCertificateView!
+
+    @IBOutlet weak var webView: WKWebView!
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
@@ -37,6 +38,7 @@ class CertificateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadWebView();
 
         self.title = certificate.title
         
@@ -48,20 +50,42 @@ class CertificateViewController: UIViewController {
         Analytics.shared.track(event: .viewed, certificate: certificate)
     }
     
-    func renderCertificate() {
-        renderedCertificateView.certificateIcon.image = UIImage(data:certificate.issuer.image)
-        renderedCertificateView.nameLabel.text = "\(certificate.recipient.givenName) \(certificate.recipient.familyName)"
-        renderedCertificateView.titleLabel.text = certificate.title
-        renderedCertificateView.subtitleLabel.text = certificate.subtitle
-        renderedCertificateView.descriptionLabel.text = certificate.description
-        renderedCertificateView.sealIcon.image = UIImage(data: certificate.image)
+    func loadWebView() {
+        let webConfiguration = WKWebViewConfiguration();
+        let webView = WKWebView(frame: .zero, configuration: webConfiguration);
+
+        webView.translatesAutoresizingMaskIntoConstraints = false;
+        view.addSubview(webView);
         
-        certificate.assertion.signatureImages.forEach { (signatureImage) in
-            guard let image = UIImage(data: signatureImage.image) else {
-                return
-            }
-            renderedCertificateView.addSignature(image: image, title: signatureImage.title)
-        }
+        let constraints = [
+            webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            webView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            webView.topAnchor.constraint(equalTo: view.topAnchor),
+            webView.bottomAnchor.constraint(equalTo: toolbar.topAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+        
+        let url = URL(string: "https://apple.com")!
+        webView.load(URLRequest(url: url))
+        
+        self.webView = webView
+    }
+    
+    func renderCertificate() {
+//        renderedCertificateView.certificateIcon.image = UIImage(data:certificate.issuer.image)
+//        renderedCertificateView.nameLabel.text = "\(certificate.recipient.givenName) \(certificate.recipient.familyName)"
+//        renderedCertificateView.titleLabel.text = certificate.title
+//        renderedCertificateView.subtitleLabel.text = certificate.subtitle
+//        renderedCertificateView.descriptionLabel.text = certificate.description
+//        renderedCertificateView.sealIcon.image = UIImage(data: certificate.image)
+//        
+//        certificate.assertion.signatureImages.forEach { (signatureImage) in
+//            guard let image = UIImage(data: signatureImage.image) else {
+//                return
+//            }
+//            renderedCertificateView.addSignature(image: image, title: signatureImage.title)
+//        }
     }
     
     func stylize() {
