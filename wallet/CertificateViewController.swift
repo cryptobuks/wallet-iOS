@@ -66,15 +66,18 @@ class CertificateViewController: UIViewController {
 
         NSLayoutConstraint.activate(constraints)
         
+        
         let file = Bundle.main.url(forResource: "certificate", withExtension: "html")
-//        webView.load(URLRequest(url: file!)) // this works
-        let contentFormat = try! String(contentsOf: file!)
-        let contents = String(format: contentFormat, certificate.assertion.uid);
-        webView.loadHTMLString(contents, baseURL: Paths.certificatesDirectory)
+        let webComponentPolyfill = Bundle.main.url(forResource: "webcomponents-hi-ce", withExtension: "js")!
+        let webComponentPath = Bundle.main.url(forResource: "blockchain-certificate", withExtension: "html")!
 
-//        let contents =
-//        webView.loadHTMLString(<#T##string: String##String#>, baseURL: Paths.certificatesDirectory);
-//        webView.loadFileURL(url!, allowingReadAccessTo: Paths.certificatesDirectory)
+        let contentFormat = try! String(contentsOf: file!)
+        let polyfillContent = try! String(contentsOf: webComponentPolyfill)
+        let contents = String(format: contentFormat, polyfillContent, webComponentPath.absoluteString, certificate.assertion.uid)
+                              
+                             // certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid)
+
+        webView.loadHTMLString(contents, baseURL: Paths.certificatesDirectory)
         
         self.webView = webView
     }

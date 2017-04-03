@@ -49,6 +49,8 @@
 		836031C51E5E513A005B2D2E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 836031C41E5E513A005B2D2E /* Settings.bundle */; };
 		836A0AE21E205BB4009FC12F /* AddIssuerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836A0AE11E205BB4009FC12F /* AddIssuerUITests.swift */; };
 		837D48761E92FF9F00DA180A /* certificate.html in Resources */ = {isa = PBXBuildFile; fileRef = 837D48751E92FF9F00DA180A /* certificate.html */; };
+		837D48791E93057800DA180A /* blockchain-certificate.html in Resources */ = {isa = PBXBuildFile; fileRef = 837D48781E93057800DA180A /* blockchain-certificate.html */; };
+		837D487B1E93084500DA180A /* webcomponents-hi-ce.js in Resources */ = {isa = PBXBuildFile; fileRef = 837D487A1E93084500DA180A /* webcomponents-hi-ce.js */; };
 		83802BF41E01BC1E00E54C13 /* NoCertificatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83802BF21E01BC1E00E54C13 /* NoCertificatesTableViewCell.swift */; };
 		838DC1301E43EF1600533AEB /* ReplacePassphraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DC12C1E43EF1600533AEB /* ReplacePassphraseViewController.swift */; };
 		838DC1331E43EFB900533AEB /* ReplacePassphraseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 838DC1311E43EFB900533AEB /* ReplacePassphraseViewController.xib */; };
@@ -153,6 +155,8 @@
 		836031C41E5E513A005B2D2E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		836A0AE11E205BB4009FC12F /* AddIssuerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddIssuerUITests.swift; sourceTree = "<group>"; };
 		837D48751E92FF9F00DA180A /* certificate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = certificate.html; sourceTree = "<group>"; };
+		837D48781E93057800DA180A /* blockchain-certificate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = "blockchain-certificate.html"; path = "External/certificate-web-component/blockchain-certificate.html"; sourceTree = "<group>"; };
+		837D487A1E93084500DA180A /* webcomponents-hi-ce.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "webcomponents-hi-ce.js"; path = "External/webcomponent/webcomponents-hi-ce.js"; sourceTree = "<group>"; };
 		83802BF21E01BC1E00E54C13 /* NoCertificatesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCertificatesTableViewCell.swift; sourceTree = "<group>"; };
 		838DC12C1E43EF1600533AEB /* ReplacePassphraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplacePassphraseViewController.swift; sourceTree = "<group>"; };
 		838DC1321E43EFB900533AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ReplacePassphraseViewController.xib; sourceTree = "<group>"; };
@@ -297,6 +301,7 @@
 		832AE0101DF8921400A3CA4A /* External */ = {
 			isa = PBXGroup;
 			children = (
+				837D48771E93054600DA180A /* WebComponent */,
 				83431D841DC406600025C055 /* RenderedCertificateView */,
 				832AE0111DF8921B00A3CA4A /* SkyLabel */,
 			);
@@ -331,6 +336,15 @@
 			);
 			name = Assets;
 			path = wallet/Assets;
+			sourceTree = "<group>";
+		};
+		837D48771E93054600DA180A /* WebComponent */ = {
+			isa = PBXGroup;
+			children = (
+				837D48781E93057800DA180A /* blockchain-certificate.html */,
+				837D487A1E93084500DA180A /* webcomponents-hi-ce.js */,
+			);
+			name = WebComponent;
 			sourceTree = "<group>";
 		};
 		83802BF61E01BC2B00E54C13 /* Cells */ = {
@@ -512,9 +526,11 @@
 				838DC1361E43F0A400533AEB /* NoCertificatesTableViewCell.xib in Resources */,
 				838DC1331E43EFB900533AEB /* ReplacePassphraseViewController.xib in Resources */,
 				838DC13C1E43F0F700533AEB /* CertificateViewController.xib in Resources */,
+				837D48791E93057800DA180A /* blockchain-certificate.html in Resources */,
 				834B94CA1DC1618900543E4F /* IssuerCollectionViewCell.xib in Resources */,
 				83111B2D1DA4110C006B058D /* Main.storyboard in Resources */,
 				836031C31E5E5064005B2D2E /* SampleCertificate.json in Resources */,
+				837D487B1E93084500DA180A /* webcomponents-hi-ce.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

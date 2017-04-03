@@ -1,24 +1,30 @@
 <!doctype html>
 <html>
-
-<head>
-  <title></title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
-<!--  <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>-->
-<!--  <link rel="import" href="../build/bundled/blockchain-certificate.html">-->
-
-  <style type="text/css">
-      html {
-          background-color: red;
-      }
-  </style>
-</head>
-
-<body>
-    <h1>It's working</h1>
-    <h2>%@</h2>
-<!--  <blockchain-certificate href="https://certificates.learningmachine.com/certificate/8dc46898e94e4596a311b0faaa42e4a3?format=json"></blockchain-certificate>-->
-</body>
-
+    
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0" />
+        <!-- 
+         Embedded webcomponents-hi-ci.js
+         https://github.com/webcomponents/webcomponentsjs/blob/master/webcomponents-hi-ce.js
+         -->
+        <script>
+            %@
+            
+            alert('yes');
+        </script>
+        
+        <link rel="import" href="%@">
+        
+        <style type="text/css">
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1>It's working</h1>
+        <blockchain-certificate href="%@"></blockchain-certificate>
+    </body>
+    
 </html>
