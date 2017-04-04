@@ -1,35 +1,30 @@
 <!doctype html>
 <html>
-    
     <head>
         <title></title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0" />
-<!--        <script type="text/javascript">-->
-<!--            %@-->
-<!--        </script>-->
-        <!--
-         Embedded webcomponents-hi-ci.js
-         https://github.com/webcomponents/webcomponentsjs/blob/master/webcomponents-hi-ce.js
-         -->
-        <script src="https://blockcertscomponent.learningmachine.com/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-        <link rel="import" src="https://blockcertscomponent.learningmachine.com/blockchain-certificate.html" />
-<!--        <script>-->
-<!--            //%@-->
-<!--        </script>-->
-
-<!--        <link rel="import" href="%@">-->
-
-        <style type="text/css">
-            
-        </style>
-    </head>
-    
+        <meta charset="utf-8">
+            <meta name="viewport"
+                content="width=device-width,minimum-scale=1.0,initial-scale=1.0">
+                <script src="https://blockcertscomponent.learningmachine.com/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+                <link rel="import" href="https://blockcertscomponent.learningmachine.com/blockchain-certificate.html">
+                    <link rel="import" href="https://blockcertscomponent.learningmachine.com/validate-certificate.html">
+                        
+                        <style type="text/css">
+                            html, body {
+                                height: 100%;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        </style>
+                        </head>
     <body>
-        <h1>It's working</h1>
-        <a href="#" onclick="changeTitle();">Alert me </a>
-<!--        <blockchain-certificate href="%@"></blockchain-certificate>-->
-        <blockchain-certificate href="https://certificates.learningmachine.com/certificate/8dc46898e94e4596a311b0faaa42e4a3?format=json"></blockchain-certificate>
+        
+        <div class="container">
+            <validate-certificate href="https://certificates.learningmachine.com/certificate/8dc46898e94e4596a311b0faaa42e4a3">
+                <blockchain-certificate href="https://certificates.learningmachine.com/certificate/8dc46898e94e4596a311b0faaa42e4a3?format=json"></blockchain-certificate>
+            </validate-certificate>
+        </div>
+        
     </body>
-    
 </html>
+
