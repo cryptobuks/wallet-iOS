@@ -51,7 +51,9 @@ class CertificateViewController: UIViewController {
     }
     
     func loadWebView() {
+        let preferences = WKPreferences();
         let webConfiguration = WKWebViewConfiguration();
+        webConfiguration.preferences = preferences;
         let webView = WKWebView(frame: .zero, configuration: webConfiguration);
 
         webView.translatesAutoresizingMaskIntoConstraints = false;
@@ -70,12 +72,16 @@ class CertificateViewController: UIViewController {
         let file = Bundle.main.url(forResource: "certificate", withExtension: "html")
         let webComponentPolyfill = Bundle.main.url(forResource: "webcomponents-hi-ce", withExtension: "js")!
         let webComponentPath = Bundle.main.url(forResource: "blockchain-certificate", withExtension: "html")!
+        
+        
+        let demoJavascript = "function changeTitle() { document.body.getElementsByTagName('h1')[0].innerText = \"Hello there\"; }    document.addEventListener(\"DOMContentLoaded\", function(event) {    changeTitle();    });"
 
         let contentFormat = try! String(contentsOf: file!)
         let polyfillContent = try! String(contentsOf: webComponentPolyfill)
-        let contents = String(format: contentFormat, polyfillContent, webComponentPath.absoluteString, certificate.assertion.uid)
-                              
-                             // certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid, certificate.assertion.uid)
+//        let contents = String(format: contentFormat, polyfillContent, webComponentPath.absoluteString, certificate.assertion.uid)
+        
+        let contents = String(format: contentFormat, demoJavascript);
+        
 
         webView.loadHTMLString(contents, baseURL: Paths.certificatesDirectory)
         
