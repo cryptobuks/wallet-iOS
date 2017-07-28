@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode8
+osx_image: xcode8.3
 #
 # We can't use SSH paths for submodules in travis.
 # https://stackoverflow.com/questions/15674064/github-submodule-access-rights-travis-ci
