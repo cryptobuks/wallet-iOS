@@ -13,8 +13,8 @@ import JSONLD
 class CertificateViewController: UIViewController {
     var delegate : CertificateViewControllerDelegate?
     
-    public let certificate: Certificate
-    private let bitcoinManager = CoreBitcoinManager()
+    @nonobjc public let certificate: Certificate
+    @nonobjc private let bitcoinManager = CoreBitcoinManager()
     
     @IBOutlet weak var renderedCertificateView: RenderedCertificateView!
     
@@ -24,7 +24,7 @@ class CertificateViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     private var inProgressRequest : CommonRequest?
     
-    private let analytics = Analytics()
+    @nonobjc private let analytics = Analytics()
     
     
     init(certificate: Certificate) {
